@@ -4,12 +4,12 @@ Meteor.settings.public = {
     "dfees": 2500,
     "loadLimit": 12,
     "displayNodes": [
-      "https://snap1.d.tube",
-      "http://127.0.0.1:8080"
+      "https://yourvids.net",
+      "https://yourvids.net:8080"
     ],
     "snapMaxFileSizeKB": 2048,
     "upldr": ["cluster"],
-    "localhost": false
+    "localhost": true
   },
   "app": "dtube/0.8",
   "beneficiary": "dtube",
@@ -42,7 +42,7 @@ Meteor.settings.public = {
 }
 
 // custom settings loaded from json
-$.get('https://d.tube/DTube_files/settings.json', function(json, result) {
+$.get('https://yourvids.net/dtube/client/settings.js', function(json, result) {
   if (result == 'success') {
     Meteor.settings.public = json
     Session.set('remoteSettings', Meteor.settings.public.remote)
